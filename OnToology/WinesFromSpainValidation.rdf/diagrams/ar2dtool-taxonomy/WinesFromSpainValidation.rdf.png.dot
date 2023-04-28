@@ -1,0 +1,43 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "WinesFromSpain:Tempranillo" "WinesFromSpain:Spain" "WinesFromSpain:Red" "WinesFromSpain:RiasBaixas" "WinesFromSpain:Aragon" "WinesFromSpain:Rating" "WinesFromSpain:RedWine" "WinesFromSpain:Tartness" "WinesFromSpain:Andalusia" "WinesFromSpain:Alicante" "WinesFromSpain:Chardonnay" "WinesFromSpain:Country" "WinesFromSpain:WineCharacteristics" "WinesFromSpain:CastileLeon" "WinesFromSpain:Priory" "WinesFromSpain:ValenciaCommunity" "WinesFromSpain:NumReviews" "WinesFromSpain:Type" "WinesFromSpain:Catalonia" "WinesFromSpain:Penedes" "WinesFromSpain:Cheap" "WinesFromSpain:Galicia" "WinesFromSpain:Albariño" "WinesFromSpain:ConcaDeBarbera" "WinesFromSpain:Rioja" "WinesFromSpain:Estremadura" "WinesFromSpain:Popularity" "WinesFromSpain:Navarre" "WinesFromSpain:Expensive" "WinesFromSpain:Wine" "WinesFromSpain:Body" "WinesFromSpain:Cava" "WinesFromSpain:Region" "WinesFromSpain:Year" "WinesFromSpain:Intermediate" "WinesFromSpain:Sparkling" "WinesFromSpain:Price" ; /*classes style*/
+	"WinesFromSpain:Estremadura" -> "WinesFromSpain:Region" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Price" -> "WinesFromSpain:WineCharacteristics" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Andalusia" -> "WinesFromSpain:Region" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Navarre" -> "WinesFromSpain:Region" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Country" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Rating" -> "WinesFromSpain:Popularity" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:ValenciaCommunity" -> "WinesFromSpain:Region" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Priory" -> "WinesFromSpain:Catalonia" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Intermediate" -> "WinesFromSpain:Price" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Type" -> "WinesFromSpain:WineCharacteristics" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Rioja" -> "WinesFromSpain:Region" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Tempranillo" -> "WinesFromSpain:Type" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Albariño" -> "WinesFromSpain:Type" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Chardonnay" -> "WinesFromSpain:Type" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Cava" -> "WinesFromSpain:Type" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Red" -> "WinesFromSpain:Type" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Galicia" -> "WinesFromSpain:Region" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:WineCharacteristics" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:RiasBaixas" -> "WinesFromSpain:Galicia" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Expensive" -> "WinesFromSpain:Price" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Cheap" -> "WinesFromSpain:Price" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:CastileLeon" -> "WinesFromSpain:Region" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Sparkling" -> "WinesFromSpain:Type" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Spain" -> "WinesFromSpain:Country" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Body" -> "WinesFromSpain:WineCharacteristics" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Tartness" -> "WinesFromSpain:WineCharacteristics" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:RedWine" -> "WinesFromSpain:Wine" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Aragon" -> "WinesFromSpain:Region" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Popularity" -> "WinesFromSpain:WineCharacteristics" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:ConcaDeBarbera" -> "WinesFromSpain:Catalonia" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:NumReviews" -> "WinesFromSpain:Popularity" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Wine" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Region" -> "WinesFromSpain:Spain" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Alicante" -> "WinesFromSpain:ValenciaCommunity" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Penedes" -> "WinesFromSpain:Catalonia" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Year" -> "WinesFromSpain:WineCharacteristics" [ label = "rdfs:subClassOf" ];
+	"WinesFromSpain:Catalonia" -> "WinesFromSpain:Region" [ label = "rdfs:subClassOf" ];
+
+}
