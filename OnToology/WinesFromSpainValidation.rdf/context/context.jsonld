@@ -1,0 +1,172 @@
+{
+  "@context" : {
+    "Albariño" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Albariño"
+    },
+    "hasPrice" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasPrice",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Estremadura" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Estremadura"
+    },
+    "hasRating" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Winery" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"
+    },
+    "license" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#terms:license"
+    },
+    "Expensive" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Expensive"
+    },
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Country"
+    },
+    "Type" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "hasWinery" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery",
+      "@type" : "@id"
+    },
+    "Penedes" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Penedes"
+    },
+    "Body" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Body"
+    },
+    "Andalusia" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Andalusia"
+    },
+    "Priory" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Priory"
+    },
+    "Rioja" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rioja"
+    },
+    "Catalonia" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia"
+    },
+    "Price" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Price"
+    },
+    "Aragon" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Aragon"
+    },
+    "hasType" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasType",
+      "@type" : "@id"
+    },
+    "Intermediate" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Intermediate"
+    },
+    "WineCharacteristics" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "Navarre" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Navarre"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/elements/1.1/rights"
+    },
+    "ConcaDeBarbera" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ConcaDeBarbera"
+    },
+    "Rating" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rating"
+    },
+    "Galicia" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Galicia"
+    },
+    "Red" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red"
+    },
+    "hasWineCharacteristics" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWineCharacteristics",
+      "@type" : "@id"
+    },
+    "Tempranillo" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tempranillo"
+    },
+    "Popularity" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Popularity"
+    },
+    "CastileLeon" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CastileLeon"
+    },
+    "Tartness" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tartness"
+    },
+    "Year" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Year"
+    },
+    "Spain" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Spain"
+    },
+    "Cheap" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cheap"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "ValenciaCommunity" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ValenciaCommunity"
+    },
+    "hasYear" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasYear",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "NumReviews" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#NumReviews"
+    },
+    "hasRegion" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRegion",
+      "@type" : "@id"
+    },
+    "Sparkling" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Sparkling"
+    },
+    "Cava" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cava"
+    },
+    "Region" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region"
+    },
+    "hasCountry" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasCountry",
+      "@type" : "@id"
+    },
+    "Chardonnay" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chardonnay"
+    },
+    "RiasBaixas" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RiasBaixas"
+    },
+    "RedWine" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine"
+    },
+    "Alicante" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Alicante"
+    },
+    "Wine" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"
+    }
+  }
+}

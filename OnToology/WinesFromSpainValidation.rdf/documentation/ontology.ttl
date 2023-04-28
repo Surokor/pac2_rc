@@ -1,0 +1,798 @@
+@prefix : <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#> .
+
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain> rdf:type owl:Ontology ;
+                                                                     owl:versionIRI <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain/1.0.0> ;
+                                                                     <http://purl.org/dc/elements/1.1/license> "WinesFromSpain is licensed under Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA) license version 4.0.67" ;
+                                                                     <http://purl.org/dc/elements/1.1/rights> "Copyright - What is the license for your ontology" ;
+                                                                     :terms:license "https://creativecommons.org/licenses/by/4.0/" ;
+                                                                     rdfs:comment "Author: Daniel Otero" ,
+                                                                                  "Wines from Spain" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#terms:license
+:terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasCountry
+:hasCountry rdf:type owl:ObjectProperty ;
+            rdfs:domain :Wine ;
+            rdfs:range :Country ;
+            rdfs:comment "Country of the wine" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRegion
+:hasRegion rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdf:type owl:AsymmetricProperty ;
+           rdfs:domain :Wine ;
+           rdfs:range :Region ;
+           rdfs:comment "Region of the wine" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasType
+:hasType rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdf:type owl:AsymmetricProperty ;
+         rdfs:domain :Wine ;
+         rdfs:range :Type ;
+         rdfs:comment "Wine variety" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWineCharacteristics
+:hasWineCharacteristics rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Wine ;
+                        rdfs:range :WineCharacteristics .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery
+:hasWinery rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdf:type owl:AsymmetricProperty ;
+           rdfs:domain :Wine ;
+           rdfs:range :Winery ;
+           rdfs:comment "Name of the winery that makes the wine" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasPrice
+:hasPrice rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Wine ;
+          rdfs:range xsd:decimal ;
+          rdfs:comment "Price of wine in Euros" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRating
+:hasRating rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Wine ;
+           rdfs:range xsd:decimal ;
+           rdfs:comment "Average rating given to the wine by the users" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasYear
+:hasYear rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Wine ;
+         rdfs:range xsd:positiveInteger ;
+         rdfs:comment "Vintage year of wine: year in which the grapes were harvested" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Albariño
+:Albariño rdf:type owl:Class ;
+          rdfs:subClassOf :Type .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Alicante
+:Alicante rdf:type owl:Class ;
+          rdfs:subClassOf :ValenciaCommunity .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Andalusia
+:Andalusia rdf:type owl:Class ;
+           rdfs:subClassOf :Region .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Aragon
+:Aragon rdf:type owl:Class ;
+        rdfs:subClassOf :Region ;
+        rdfs:comment "Region of Spain class" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Body
+:Body rdf:type owl:Class ;
+      rdfs:subClassOf :WineCharacteristics .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CastileLeon
+:CastileLeon rdf:type owl:Class ;
+             rdfs:subClassOf :Region .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia
+:Catalonia rdf:type owl:Class ;
+           rdfs:subClassOf :Region .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cava
+:Cava rdf:type owl:Class ;
+      rdfs:subClassOf :Type .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chardonnay
+:Chardonnay rdf:type owl:Class ;
+            rdfs:subClassOf :Type .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cheap
+:Cheap rdf:type owl:Class ;
+       rdfs:subClassOf :Price ;
+       rdfs:comment "Class that includes the cheap concept based on price" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ConcaDeBarbera
+:ConcaDeBarbera rdf:type owl:Class ;
+                rdfs:subClassOf :Catalonia .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing ;
+         rdfs:comment "Country class for countries" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Estremadura
+:Estremadura rdf:type owl:Class ;
+             rdfs:subClassOf :Region .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Expensive
+:Expensive rdf:type owl:Class ;
+           rdfs:subClassOf :Price ;
+           rdfs:comment "Class that includes the expensive concept based on price" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Galicia
+:Galicia rdf:type owl:Class ;
+         rdfs:subClassOf :Region ;
+         rdfs:comment "Region of Spain class" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Intermediate
+:Intermediate rdf:type owl:Class ;
+              rdfs:subClassOf :Price ;
+              rdfs:comment "Class that includes the intermediate concept based on price" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Navarre
+:Navarre rdf:type owl:Class ;
+         rdfs:subClassOf :Region .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#NumReviews
+:NumReviews rdf:type owl:Class ;
+            rdfs:subClassOf :Popularity ;
+            rdfs:comment "Number of reviews class" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Penedes
+:Penedes rdf:type owl:Class ;
+         rdfs:subClassOf :Catalonia .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Popularity
+:Popularity rdf:type owl:Class ;
+            rdfs:subClassOf :WineCharacteristics ;
+            rdfs:comment "Popularity characteristic class" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Price
+:Price rdf:type owl:Class ;
+       rdfs:subClassOf :WineCharacteristics ;
+       rdfs:comment "Price characteristic class" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Priory
+:Priory rdf:type owl:Class ;
+        rdfs:subClassOf :Catalonia ;
+        rdfs:comment "Region of Catalonia class" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rating
+:Rating rdf:type owl:Class ;
+        rdfs:subClassOf :Popularity ;
+        rdfs:comment "Rating class" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red
+:Red rdf:type owl:Class ;
+     rdfs:subClassOf :Type .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine
+:RedWine rdf:type owl:Class ;
+         rdfs:subClassOf :Wine ;
+         rdfs:comment "Class for red wines" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region
+:Region rdf:type owl:Class ;
+        rdfs:subClassOf :Spain ;
+        rdfs:comment "Class for the regions of Spain" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RiasBaixas
+:RiasBaixas rdf:type owl:Class ;
+            rdfs:subClassOf :Galicia .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rioja
+:Rioja rdf:type owl:Class ;
+       rdfs:subClassOf :Region .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Spain
+:Spain rdf:type owl:Class ;
+       rdfs:subClassOf :Country .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Sparkling
+:Sparkling rdf:type owl:Class ;
+           rdfs:subClassOf :Type .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tartness
+:Tartness rdf:type owl:Class ;
+          rdfs:subClassOf :WineCharacteristics ;
+          rdfs:comment "Tartness characteristic class" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tempranillo
+:Tempranillo rdf:type owl:Class ;
+             rdfs:subClassOf :Type .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type
+:Type rdf:type owl:Class ;
+      rdfs:subClassOf :WineCharacteristics ;
+      rdfs:comment "Type characteristic class" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ValenciaCommunity
+:ValenciaCommunity rdf:type owl:Class ;
+                   rdfs:subClassOf :Region ;
+                   rdfs:comment "Region of Spain class" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine
+:Wine rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasYear ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:positiveInteger
+                      ] ;
+      rdfs:comment "General class for wines" ;
+      rdfs:sameAs "https://dbpedia.org/page/Wine" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics
+:WineCharacteristics rdf:type owl:Class ;
+                     rdfs:subClassOf owl:Thing ;
+                     rdfs:comment "Class for the different wine characteristics" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery
+:Winery rdf:type owl:Class ;
+        rdfs:comment "Class for wineries" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Year
+:Year rdf:type owl:Class ;
+      rdfs:subClassOf :WineCharacteristics ;
+      rdfs:comment "Vintage year characteristic class" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Albariño
+:Albariño rdf:type owl:NamedIndividual ,
+                   :Albariño .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Alicante
+:Alicante rdf:type owl:NamedIndividual ,
+                   :Alicante .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Andalusia
+:Andalusia rdf:type owl:NamedIndividual ,
+                    :Andalusia .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#BodegasMauro
+:BodegasMauro rdf:type owl:NamedIndividual ,
+                       :Winery .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Body
+:Body rdf:type owl:NamedIndividual ,
+               :WineCharacteristics .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CastileLeon
+:CastileLeon rdf:type owl:NamedIndividual ,
+                      :CastileLeon .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia
+:Catalonia rdf:type owl:NamedIndividual ,
+                    :Catalonia .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cava
+:Cava rdf:type owl:NamedIndividual ,
+               :Cava .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chardonnay
+:Chardonnay rdf:type owl:NamedIndividual ,
+                     :Chardonnay .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chivite
+:Chivite rdf:type owl:NamedIndividual ,
+                  :Winery .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ConcaDeBarbera
+:ConcaDeBarbera rdf:type owl:NamedIndividual ,
+                         :ConcaDeBarbera .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CorpinnatEnotecaReservaParticularDeRecaredo
+:CorpinnatEnotecaReservaParticularDeRecaredo rdf:type owl:NamedIndividual ,
+                                                      :RedWine ;
+                                             :hasRegion :Catalonia ;
+                                             :hasType :Sparkling ;
+                                             :hasWinery :Recaredo ;
+                                             :hasPrice 130 ;
+                                             :hasRating 4.6 ;
+                                             :hasYear 2004 .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#EnriqueMendoza
+:EnriqueMendoza rdf:type owl:NamedIndividual ,
+                         :Winery .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Estremadura
+:Estremadura rdf:type owl:NamedIndividual ,
+                      :Estremadura .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#FamiliaTorres
+:FamiliaTorres rdf:type owl:NamedIndividual ,
+                        :Winery .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#GranVinoAlbarino
+:GranVinoAlbarino rdf:type owl:NamedIndividual ,
+                           :RedWine ;
+                  :hasRegion :RiasBaixas ;
+                  :hasType :Albariño ;
+                  :hasWinery :PazoBarrantes ;
+                  :hasPrice 34.9 ;
+                  :hasRating 4.5 ;
+                  :hasYear 2019 .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#GranjaGranReservaRioja
+:GranjaGranReservaRioja rdf:type owl:NamedIndividual ,
+                                 :RedWine ;
+                        :hasRegion :Rioja ;
+                        :hasType :Red ;
+                        :hasWinery :Remelluri ;
+                        :hasPrice 45.95 ;
+                        :hasRating 4.4 ;
+                        :hasYear 2012 .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Habla
+:Habla rdf:type owl:NamedIndividual ,
+                :Winery .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#LosAguilares
+:LosAguilares rdf:type owl:NamedIndividual ,
+                       :Winery .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#MasDelSerral
+:MasDelSerral rdf:type owl:NamedIndividual ,
+                       :Winery .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Milmanda
+:Milmanda rdf:type owl:NamedIndividual ,
+                   :RedWine ;
+          :hasRegion :ConcaDeBarbera ;
+          :hasType :Chardonnay ;
+          :hasWinery :FamiliaTorres ;
+          :hasPrice 126.2 ;
+          :hasRating 4.2 ;
+          :hasYear 2015 .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#NavarraColeccion125Blanco
+:NavarraColeccion125Blanco rdf:type owl:NamedIndividual ,
+                                    :RedWine ;
+                           :hasRegion :Navarre ;
+                           :hasType :Chardonnay ;
+                           :hasWinery :Chivite ;
+                           :hasPrice 49.1 ;
+                           :hasRating 4.5 ;
+                           :hasYear 2018 .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Navarre
+:Navarre rdf:type owl:NamedIndividual ,
+                  :Navarre .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#No23
+:No23 rdf:type owl:NamedIndividual ,
+               :RedWine ;
+      :hasRegion :Estremadura ;
+      :hasType :Red ;
+      :hasWinery :Habla ;
+      :hasPrice 23.1 ;
+      :hasRating 4.3 ;
+      :hasYear 2017 .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#PazoBarrantes
+:PazoBarrantes rdf:type owl:NamedIndividual ,
+                        :Winery .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Penedes
+:Penedes rdf:type owl:NamedIndividual ,
+                  :Penedes .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Recaredo
+:Recaredo rdf:type owl:NamedIndividual ,
+                   :Winery .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red
+:Red rdf:type owl:NamedIndividual ,
+              :Red .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Remelluri
+:Remelluri rdf:type owl:NamedIndividual ,
+                    :Winery .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RiasBaixas
+:RiasBaixas rdf:type owl:NamedIndividual ,
+                     :RiasBaixas .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rioja
+:Rioja rdf:type owl:NamedIndividual ,
+                :Rioja .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#SantaRosa
+:SantaRosa rdf:type owl:NamedIndividual ,
+                    :RedWine ;
+           :hasRegion :Alicante ;
+           :hasType :Red ;
+           :hasWinery :EnriqueMendoza ;
+           :hasPrice 18.9 ;
+           :hasRating 4.2 ;
+           :hasYear 2017 .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Spain
+:Spain rdf:type owl:NamedIndividual ,
+                :Country .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Sparkling
+:Sparkling rdf:type owl:NamedIndividual ,
+                    :Sparkling .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#TadeoTinto
+:TadeoTinto rdf:type owl:NamedIndividual ,
+                     :RedWine ;
+            :hasRegion :Andalusia ;
+            :hasType :Red ;
+            :hasWinery :LosAguilares ;
+            :hasPrice 33 ;
+            :hasRating 4.4 ;
+            :hasYear 2014 .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tempranillo
+:Tempranillo rdf:type owl:NamedIndividual ,
+                      :Tempranillo .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#TerreusParajeDeCuevaBaja
+:TerreusParajeDeCuevaBaja rdf:type owl:NamedIndividual ,
+                                   :RedWine ;
+                          :hasCountry :Spain ;
+                          :hasRegion :CastileLeon ;
+                          :hasType :Tempranillo ;
+                          :hasWineCharacteristics :Body ;
+                          :hasWinery :BodegasMauro ;
+                          :hasPrice 94.95 ;
+                          :hasRating 4.6 ;
+                          :hasYear 2015 .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#VinoMasDelSerral
+:VinoMasDelSerral rdf:type owl:NamedIndividual ,
+                           :RedWine ;
+                  :hasRegion :Penedes ;
+                  :hasType :Sparkling ;
+                  :hasWinery :MasDelSerral ;
+                  :hasPrice 192.16 ;
+                  :hasRating 4.5 ;
+                  :hasYear 2007 .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Albariño rdfs:comment "Specific type wine class" .
+
+
+:Alicante rdfs:comment "Region of Valencia Community class" .
+
+
+:Andalusia rdfs:comment "Region of Spain class" .
+
+
+:Body rdfs:comment "Body characteristic class" ;
+      rdfs:sameAs "https://dbpedia.org/page/Body" .
+
+
+:CastileLeon rdfs:comment "Region of Spain class" .
+
+
+:Catalonia rdfs:comment "Region of Spain class" ;
+           rdfs:sameAs "https://es.dbpedia.org/page/Catalu%C3%B1a" .
+
+
+:Cava rdfs:comment "Specific type wine class" .
+
+
+:Chardonnay rdfs:comment "Specific type wine class" .
+
+
+:ConcaDeBarbera rdfs:comment "Region of Catalonia class" .
+
+
+:Estremadura rdfs:comment "Region of Spain class" .
+
+
+:Navarre rdfs:comment "Region of Spain class" .
+
+
+:Penedes rdfs:comment "Region of Catalonia class" .
+
+
+:Red rdfs:comment "Specific type wine class" .
+
+
+:RiasBaixas rdfs:comment "Region of Galicia class" .
+
+
+:Rioja rdfs:comment "Region of Spain class" .
+
+
+:Sparkling rdfs:comment "Specific type wine class" .
+
+
+:Tempranillo rdfs:comment "Specific type wine class" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Albariño
+                :Cava
+                :Chardonnay
+                :Red
+                :Sparkling
+                :Tempranillo
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Andalusia
+                :Aragon
+                :CastileLeon
+                :Catalonia
+                :Estremadura
+                :Galicia
+                :Navarre
+                :Rioja
+                :ValenciaCommunity
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#w> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPrice ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Wine ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#p> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 20 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Cheap ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPrice ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#p> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 100 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Wine ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Expensive ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPrice ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#p> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 20 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Wine ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first <urn:swrl:var#p> ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 100 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Intermediate ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
