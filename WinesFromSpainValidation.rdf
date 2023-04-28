@@ -1,0 +1,1229 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain/"
+     xml:base="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#terms:"
+     xmlns:WinesFromSpain="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain">
+        <dc:license>WinesFromSpain is licensed under Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA) license version 4.0.67</dc:license>
+        <dc:rights>Copyright - What is the license for your ontology</dc:rights>
+        <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
+        <rdfs:comment>Author: Daniel Otero</rdfs:comment>
+        <rdfs:comment>Wines from Spain</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#terms:license -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#terms:license"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasCountry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Country"/>
+        <rdfs:comment>Country of the wine</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRegion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region"/>
+        <rdfs:comment>Region of the wine</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type"/>
+        <rdfs:comment>Wine variety</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWineCharacteristics -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWineCharacteristics">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"/>
+        <rdfs:comment>Name of the winery that makes the wine</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasPrice">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Price of wine in Euros</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Average rating given to the wine by the users</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>Vintage year of wine: year in which the grapes were harvested</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Albariño -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Albariño">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Alicante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Alicante">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ValenciaCommunity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Andalusia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Andalusia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Aragon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Aragon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region"/>
+        <rdfs:comment>Region of Spain class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Body -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Body">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CastileLeon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CastileLeon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cava -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cava">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chardonnay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chardonnay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cheap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cheap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Price"/>
+        <rdfs:comment>Class that includes the cheap concept based on price</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ConcaDeBarbera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ConcaDeBarbera">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Country">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Country class for countries</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Estremadura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Estremadura">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Expensive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Expensive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Price"/>
+        <rdfs:comment>Class that includes the expensive concept based on price</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Galicia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Galicia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region"/>
+        <rdfs:comment>Region of Spain class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Intermediate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Intermediate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Price"/>
+        <rdfs:comment>Class that includes the intermediate concept based on price</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Navarre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Navarre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#NumReviews -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#NumReviews">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Popularity"/>
+        <rdfs:comment>Number of reviews class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Penedes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Penedes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Popularity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Popularity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics"/>
+        <rdfs:comment>Popularity characteristic class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Price -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Price">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics"/>
+        <rdfs:comment>Price characteristic class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Priory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Priory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia"/>
+        <rdfs:comment>Region of Catalonia class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Popularity"/>
+        <rdfs:comment>Rating class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"/>
+        <rdfs:comment>Class for red wines</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Spain"/>
+        <rdfs:comment>Class for the regions of Spain</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RiasBaixas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RiasBaixas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Galicia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rioja -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rioja">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Spain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Spain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Sparkling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Sparkling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tartness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tartness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics"/>
+        <rdfs:comment>Tartness characteristic class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tempranillo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tempranillo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics"/>
+        <rdfs:comment>Type characteristic class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ValenciaCommunity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ValenciaCommunity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region"/>
+        <rdfs:comment>Region of Spain class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasYear"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>General class for wines</rdfs:comment>
+        <rdfs:sameAs>https://dbpedia.org/page/Wine</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Class for the different wine characteristics</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery">
+        <rdfs:comment>Class for wineries</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Year -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Year">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics"/>
+        <rdfs:comment>Vintage year characteristic class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Albariño -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Albariño">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Albariño"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Alicante -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Alicante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Alicante"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Andalusia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Andalusia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Andalusia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#BodegasMauro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#BodegasMauro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Body -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Body">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CastileLeon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CastileLeon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CastileLeon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cava -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cava">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cava"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chardonnay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chardonnay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chardonnay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chivite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chivite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ConcaDeBarbera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ConcaDeBarbera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ConcaDeBarbera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CorpinnatEnotecaReservaParticularDeRecaredo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CorpinnatEnotecaReservaParticularDeRecaredo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine"/>
+        <WinesFromSpain:hasRegion rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia"/>
+        <WinesFromSpain:hasType rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Sparkling"/>
+        <WinesFromSpain:hasWinery rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Recaredo"/>
+        <WinesFromSpain:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">130</WinesFromSpain:hasPrice>
+        <WinesFromSpain:hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.6</WinesFromSpain:hasRating>
+        <WinesFromSpain:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004</WinesFromSpain:hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#EnriqueMendoza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#EnriqueMendoza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Estremadura -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Estremadura">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Estremadura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#FamiliaTorres -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#FamiliaTorres">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#GranVinoAlbarino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#GranVinoAlbarino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine"/>
+        <WinesFromSpain:hasRegion rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RiasBaixas"/>
+        <WinesFromSpain:hasType rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Albariño"/>
+        <WinesFromSpain:hasWinery rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#PazoBarrantes"/>
+        <WinesFromSpain:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34.9</WinesFromSpain:hasPrice>
+        <WinesFromSpain:hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.5</WinesFromSpain:hasRating>
+        <WinesFromSpain:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</WinesFromSpain:hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#GranjaGranReservaRioja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#GranjaGranReservaRioja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine"/>
+        <WinesFromSpain:hasRegion rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rioja"/>
+        <WinesFromSpain:hasType rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red"/>
+        <WinesFromSpain:hasWinery rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Remelluri"/>
+        <WinesFromSpain:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45.95</WinesFromSpain:hasPrice>
+        <WinesFromSpain:hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.4</WinesFromSpain:hasRating>
+        <WinesFromSpain:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012</WinesFromSpain:hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Habla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Habla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#LosAguilares -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#LosAguilares">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#MasDelSerral -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#MasDelSerral">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Milmanda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Milmanda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine"/>
+        <WinesFromSpain:hasRegion rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ConcaDeBarbera"/>
+        <WinesFromSpain:hasType rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chardonnay"/>
+        <WinesFromSpain:hasWinery rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#FamiliaTorres"/>
+        <WinesFromSpain:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">126.2</WinesFromSpain:hasPrice>
+        <WinesFromSpain:hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</WinesFromSpain:hasRating>
+        <WinesFromSpain:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015</WinesFromSpain:hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#NavarraColeccion125Blanco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#NavarraColeccion125Blanco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine"/>
+        <WinesFromSpain:hasRegion rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Navarre"/>
+        <WinesFromSpain:hasType rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chardonnay"/>
+        <WinesFromSpain:hasWinery rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chivite"/>
+        <WinesFromSpain:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.1</WinesFromSpain:hasPrice>
+        <WinesFromSpain:hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.5</WinesFromSpain:hasRating>
+        <WinesFromSpain:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2018</WinesFromSpain:hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Navarre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Navarre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Navarre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#No23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#No23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine"/>
+        <WinesFromSpain:hasRegion rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Estremadura"/>
+        <WinesFromSpain:hasType rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red"/>
+        <WinesFromSpain:hasWinery rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Habla"/>
+        <WinesFromSpain:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.1</WinesFromSpain:hasPrice>
+        <WinesFromSpain:hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.3</WinesFromSpain:hasRating>
+        <WinesFromSpain:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2017</WinesFromSpain:hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#PazoBarrantes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#PazoBarrantes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Penedes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Penedes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Penedes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Recaredo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Recaredo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Remelluri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Remelluri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RiasBaixas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RiasBaixas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RiasBaixas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rioja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rioja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rioja"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#SantaRosa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#SantaRosa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine"/>
+        <WinesFromSpain:hasRegion rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Alicante"/>
+        <WinesFromSpain:hasType rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red"/>
+        <WinesFromSpain:hasWinery rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#EnriqueMendoza"/>
+        <WinesFromSpain:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.9</WinesFromSpain:hasPrice>
+        <WinesFromSpain:hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</WinesFromSpain:hasRating>
+        <WinesFromSpain:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2017</WinesFromSpain:hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Spain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Spain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Sparkling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Sparkling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Sparkling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#TadeoTinto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#TadeoTinto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine"/>
+        <WinesFromSpain:hasRegion rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Andalusia"/>
+        <WinesFromSpain:hasType rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red"/>
+        <WinesFromSpain:hasWinery rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#LosAguilares"/>
+        <WinesFromSpain:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33</WinesFromSpain:hasPrice>
+        <WinesFromSpain:hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.4</WinesFromSpain:hasRating>
+        <WinesFromSpain:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2014</WinesFromSpain:hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tempranillo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tempranillo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tempranillo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#TerreusParajeDeCuevaBaja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#TerreusParajeDeCuevaBaja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine"/>
+        <WinesFromSpain:hasCountry rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Spain"/>
+        <WinesFromSpain:hasRegion rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CastileLeon"/>
+        <WinesFromSpain:hasType rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tempranillo"/>
+        <WinesFromSpain:hasWineCharacteristics rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Body"/>
+        <WinesFromSpain:hasWinery rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#BodegasMauro"/>
+        <WinesFromSpain:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">94.95</WinesFromSpain:hasPrice>
+        <WinesFromSpain:hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.6</WinesFromSpain:hasRating>
+        <WinesFromSpain:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015</WinesFromSpain:hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#VinoMasDelSerral -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#VinoMasDelSerral">
+        <rdf:type rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RedWine"/>
+        <WinesFromSpain:hasRegion rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Penedes"/>
+        <WinesFromSpain:hasType rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Sparkling"/>
+        <WinesFromSpain:hasWinery rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#MasDelSerral"/>
+        <WinesFromSpain:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">192.16</WinesFromSpain:hasPrice>
+        <WinesFromSpain:hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.5</WinesFromSpain:hasRating>
+        <WinesFromSpain:hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007</WinesFromSpain:hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Albariño">
+        <rdfs:comment>Specific type wine class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Alicante">
+        <rdfs:comment>Region of Valencia Community class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Andalusia">
+        <rdfs:comment>Region of Spain class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Body">
+        <rdfs:comment>Body characteristic class</rdfs:comment>
+        <rdfs:sameAs>https://dbpedia.org/page/Body</rdfs:sameAs>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CastileLeon">
+        <rdfs:comment>Region of Spain class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia">
+        <rdfs:comment>Region of Spain class</rdfs:comment>
+        <rdfs:sameAs>https://es.dbpedia.org/page/Catalu%C3%B1a</rdfs:sameAs>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cava">
+        <rdfs:comment>Specific type wine class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chardonnay">
+        <rdfs:comment>Specific type wine class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ConcaDeBarbera">
+        <rdfs:comment>Region of Catalonia class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Estremadura">
+        <rdfs:comment>Region of Spain class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Navarre">
+        <rdfs:comment>Region of Spain class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Penedes">
+        <rdfs:comment>Region of Catalonia class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red">
+        <rdfs:comment>Specific type wine class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RiasBaixas">
+        <rdfs:comment>Region of Galicia class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rioja">
+        <rdfs:comment>Region of Spain class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Sparkling">
+        <rdfs:comment>Specific type wine class</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tempranillo">
+        <rdfs:comment>Specific type wine class</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Albariño"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cava"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chardonnay"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Sparkling"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Tempranillo"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Andalusia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Aragon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CastileLeon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Catalonia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Estremadura"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Galicia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Navarre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Rioja"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#ValenciaCommunity"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#w">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasPrice"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="urn:swrl:var#p"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Expensive"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasPrice"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="urn:swrl:var#p"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="urn:swrl:var#p"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Intermediate"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasPrice"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#p"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Cheap"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
