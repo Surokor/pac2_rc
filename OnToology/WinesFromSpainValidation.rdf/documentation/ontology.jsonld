@@ -1029,6 +1029,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCountryOf"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasPrice",
@@ -1074,6 +1080,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isRegionOf"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasType",
@@ -1089,6 +1098,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isTypeOf"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWineCharacteristics",
@@ -1098,6 +1110,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCharacteristicOf"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery",
@@ -1113,6 +1128,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isWineryOf"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasYear",
@@ -1128,6 +1146,54 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCharacteristicOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCountryOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isRegionOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isTypeOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isWineryOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#terms:license",
