@@ -44,6 +44,8 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasCountry
 :hasCountry rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            owl:inverseOf :isCountryOf ;
             rdfs:domain :Wine ;
             rdfs:range :Country ;
             rdfs:comment "Country of the wine" .
@@ -52,6 +54,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRegion
 :hasRegion rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :isRegionOf ;
            rdf:type owl:AsymmetricProperty ;
            rdfs:domain :Wine ;
            rdfs:range :Region ;
@@ -61,6 +64,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasType
 :hasType rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
+         owl:inverseOf :isTypeOf ;
          rdf:type owl:AsymmetricProperty ;
          rdfs:domain :Wine ;
          rdfs:range :Type ;
@@ -69,6 +73,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWineCharacteristics
 :hasWineCharacteristics rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :isCharacteristicOf ;
                         rdfs:domain :Wine ;
                         rdfs:range :WineCharacteristics .
 
@@ -76,10 +81,42 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery
 :hasWinery rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :isWineryOf ;
            rdf:type owl:AsymmetricProperty ;
            rdfs:domain :Wine ;
            rdfs:range :Winery ;
            rdfs:comment "Name of the winery that makes the wine" .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCharacteristicOf
+:isCharacteristicOf rdf:type owl:ObjectProperty ;
+                    rdfs:domain :WineCharacteristics ;
+                    rdfs:range :Wine .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCountryOf
+:isCountryOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Country ;
+             rdfs:range :Wine .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isRegionOf
+:isRegionOf rdf:type owl:ObjectProperty ;
+            rdfs:domain :Region ;
+            rdfs:range :Wine .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isTypeOf
+:isTypeOf rdf:type owl:ObjectProperty ;
+          rdfs:domain :Type ;
+          rdfs:range :Wine .
+
+
+###  http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isWineryOf
+:isWineryOf rdf:type owl:ObjectProperty ;
+            rdfs:domain :Winery ;
+            rdfs:range :Wine .
 
 
 #################################################################

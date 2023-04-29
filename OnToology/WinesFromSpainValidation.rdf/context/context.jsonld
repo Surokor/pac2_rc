@@ -92,6 +92,14 @@
     "Galicia" : {
       "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Galicia"
     },
+    "isTypeOf" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isTypeOf",
+      "@type" : "@id"
+    },
+    "isRegionOf" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isRegionOf",
+      "@type" : "@id"
+    },
     "Red" : {
       "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Red"
     },
@@ -104,6 +112,10 @@
     },
     "Popularity" : {
       "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Popularity"
+    },
+    "isCountryOf" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCountryOf",
+      "@type" : "@id"
     },
     "CastileLeon" : {
       "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#CastileLeon"
@@ -136,6 +148,10 @@
     "NumReviews" : {
       "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#NumReviews"
     },
+    "isWineryOf" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isWineryOf",
+      "@type" : "@id"
+    },
     "hasRegion" : {
       "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRegion",
       "@type" : "@id"
@@ -155,6 +171,10 @@
     },
     "Chardonnay" : {
       "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Chardonnay"
+    },
+    "isCharacteristicOf" : {
+      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCharacteristicOf",
+      "@type" : "@id"
     },
     "RiasBaixas" : {
       "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#RiasBaixas"
