@@ -10,12 +10,13 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#terms:"
+     xmlns:terms1="http://purl.org/dc/terms/"
      xmlns:WinesFromSpain="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain">
         <owl:versionIRI rdf:resource="http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain/1.0.0"/>
         <dc:license>WinesFromSpain is licensed under Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA) license version 4.0.67</dc:license>
         <dc:rights>Copyright - What is the license for your ontology</dc:rights>
-        <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
+        <terms1:license>https://creativecommons.org/licenses/by/4.0/</terms1:license>
         <rdfs:comment>Author: Daniel Otero</rdfs:comment>
         <rdfs:comment>Wines from Spain</rdfs:comment>
     </owl:Ontology>
@@ -45,6 +46,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 

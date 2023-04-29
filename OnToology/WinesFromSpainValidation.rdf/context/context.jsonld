@@ -18,7 +18,7 @@
       "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery"
     },
     "license" : {
-      "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#terms:license"
+      "@id" : "http://purl.org/dc/terms/license"
     },
     "Expensive" : {
       "@id" : "http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Expensive"
