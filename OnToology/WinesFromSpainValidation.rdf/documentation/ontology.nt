@@ -1,10 +1,10 @@
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain/1.0.0> .
-<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain> <http://purl.org/dc/elements/1.1/license> "WinesFromSpain is licensed under Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA) license version 4.0.67" .
-<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain> <http://purl.org/dc/elements/1.1/rights> "Copyright - What is the license for your ontology" .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain> <http://purl.org/dc/elements/1.1/creator> "Daniel Otero Cuadros" .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" .
-<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain> <http://www.w3.org/2000/01/rdf-schema#comment> "Author: Daniel Otero" .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain> <http://www.w3.org/2000/01/rdf-schema#comment> "Wines from Spain" .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain> <http://www.w3.org/2000/01/rdf-schema#label> "Wines from Spain PAC2 RC" .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
 # 
 # 
 # #################################################################
@@ -14,17 +14,11 @@
 # #################################################################
 # 
 # 
-# http://purl.org/dc/elements/1.1/license
-<http://purl.org/dc/elements/1.1/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/elements/1.1/rights
-<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#terms:license
-<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#terms:license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://www.w3.org/2000/01/rdf-schema#sameAs
 <http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -40,6 +34,8 @@
 # 
 # http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasCountry
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasCountry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasCountry> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCountryOf> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Country> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasCountry> <http://www.w3.org/2000/01/rdf-schema#comment> "Country of the wine" .
@@ -47,6 +43,7 @@
 # http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRegion
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRegion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRegion> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isRegionOf> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRegion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasRegion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region> .
@@ -55,6 +52,7 @@
 # http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasType
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasType> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isTypeOf> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type> .
@@ -62,16 +60,44 @@
 # 
 # http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWineCharacteristics
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWineCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWineCharacteristics> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCharacteristicOf> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWineCharacteristics> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWineCharacteristics> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics> .
 # 
 # http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isWineryOf> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery> .
 <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#hasWinery> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the winery that makes the wine" .
+# 
+# http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCharacteristicOf
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCharacteristicOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCharacteristicOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#WineCharacteristics> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCharacteristicOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine> .
+# 
+# http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCountryOf
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCountryOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCountryOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCountryOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Country> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isCountryOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine> .
+# 
+# http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isRegionOf
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isRegionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isRegionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Region> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isRegionOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine> .
+# 
+# http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isTypeOf
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isTypeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isTypeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Type> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isTypeOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine> .
+# 
+# http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isWineryOf
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isWineryOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isWineryOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Winery> .
+<http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#isWineryOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/doter/ontologies/2023/3/WinesFromSpain#Wine> .
 # 
 # 
 # 
